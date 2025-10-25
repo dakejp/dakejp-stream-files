@@ -1,0 +1,26 @@
+var b=parseFloat(a);
+if((a.endsWith(`kg`))==true){
+((b*2.20462).toFixed(2)+` lbs or `+(b*0.15747).toFixed(2)+` stones`);
+}else if((a.endsWith(`lbs`)||a.endsWith(`pounds`))==true){
+((b/2.20462).toFixed(2)+` kg or `+(b/14).toFixed(2)+` stones`);
+}else if((a.endsWith(`stones`)||a.endsWith(`stone`))==true){
+((b*6.3503).toFixed(2)+` kg or `+(b*14).toFixed(2)+` lbs`);
+}else if((a.endsWith(`f`))==true){
+(((b-32)/1.8).toFixed(1)+`\xB0C or `+(((b-32)/1.8)+273.15).toFixed(1)+`K or `+((((b-32)/1.8)+273.15)*1.8).toFixed(1)+`\xB0R`);
+}else if((a.endsWith(`c`))==true){
+(((b*1.8)+32).toFixed(1)+`\xB0F or `+(b+273.15).toFixed(1)+`K or `+((b+273.15)*1.8).toFixed(1)+`\xB0R`);
+}else if((a.endsWith(`cm`))==true){
+((b*0.3937).toFixed(2)+` inches or `+Math.floor(b*0.032808)+` ft `+((b*0.3937)%12).toFixed(0)+` in or `+(b*0.000006214).toFixed(3)+` miles`);
+}else if((a.endsWith(`meter`)||a.endsWith(`meters`))==true){
+((b*39.37).toFixed(2)+` inches or `+Math.floor(b*3.2808)+` ft `+((b*39.37)%12).toFixed(0)+` in or `+(b*0.0006214).toFixed(3)+` miles`);
+}else if((a.endsWith(`km`))==true){
+((b*39370).toFixed(2)+` inches or `+Math.floor(b*3280.84)+` ft `+((b*39370)%12).toFixed(0)+` in or `+(b*0.62137).toFixed(3)+` miles`);
+}else if((a.endsWith(`in`)||a.endsWith(`inches`))==true){
+((b*2.54).toFixed(2)+` cm or `+(b/39.37).toFixed(2)+` m or `+(b/39370.1).toFixed(2)+` km or `+Math.floor(b/12)+` ft `+(b%12).toFixed(0)+` in or `+(b/63360).toFixed(3)+` miles`);
+}else if((a.endsWith(`ft`)||a.endsWith(`feet`))==true){
+((b*30.48).toFixed(2)+` cm or `+(b/3.2808).toFixed(2)+` m or `+(b/3280.84).toFixed(2)+` km or `+(b*12).toFixed(2)+`inches or `+(b/5280).toFixed(3)+` miles`);
+}else if((a.endsWith(`mile`)||a.endsWith(`miles`))==true){
+((b*160934).toFixed(2)+` cm or `+(b*1609.34).toFixed(2)+` m or `+(b*1.60934).toFixed(2)+` km or `+Math.floor(b*5280)+` ft `+((b*63360)%12).toFixed(0)+` in`);
+}else{
+`Please input the command in the correct format of [quantity][kg/lbs/stones/F/C/cm/meter/km/in/ft/miles]`;
+}
